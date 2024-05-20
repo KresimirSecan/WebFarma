@@ -1,0 +1,179 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.nav-left a, .nav-right a, .nav-right button {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-left a:hover, .nav-right a:hover, .nav-right button:hover {
+  background-color: #555;
+}
+
+.nav-left a.active, .nav-right a.active {
+  background-color: #007bff;
+}
+
+.nav-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.nav-right .username {
+  color: white;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.nav-right button {
+  background-color: #ff4d4d;
+  color: white;
+  border: 1px solid #ff1a1a;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-right button:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.05);
+}
+
+.nav-title {
+  font-size: 1.5em;
+  color: white;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-title i {
+  font-size: 1.3em;
+  margin-bottom: 10px; 
+  margin-right: 3px; /* Reduce the margin to move the icon closer to the text */
+}
+
+/* Page styles */
+.page {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+/* Example specific styles */
+.home-page {
+  background-color: #e3f2fd;
+}
+
+.drugs-page {
+  background-color: #ffebee;
+}
+
+.drug-page {
+  background-color: #e8f5e9;
+}
+
+/* Drug specific styles */
+.drug {
+  background-color: #ffffff;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.drug:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.body {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.drug button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.drug button:hover {
+  background-color: #ff1a1a;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-left, .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-left a, .nav-right a, .nav-right button {
+    margin: 5px 0;
+  }
+
+  .nav-right {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-title {
+    font-size: 1.2em;
+  }
+
+  .nav-left a, .nav-right a, .nav-right button {
+    padding: 8px 12px;
+    margin: 3px 0;
+  }
+}
