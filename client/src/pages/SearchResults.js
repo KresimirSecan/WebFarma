@@ -20,7 +20,6 @@ function SearchResults() {
         const searchTerm = params.get('name');
 
         if (searchTerm) {
-            // Fetch medicines
             axios.get(`http://localhost:3001/drug/search/${searchTerm}`, {
                 params: {
                     page: medicineCurrentPage,
@@ -32,7 +31,6 @@ function SearchResults() {
             })
             .catch(error => console.error('Error fetching medicine search results:', error));
 
-            // Fetch symptomps
             axios.get(`http://localhost:3001/symptomps/search/${searchTerm}`, {
                 params: {
                     page: symptompsCurrentPage,
@@ -56,17 +54,17 @@ function SearchResults() {
 
     const handleMedicineClick = (drug) => {
         if (selectedMedicine && selectedMedicine.id === drug.id) {
-            setSelectedMedicine(null); // Deselect if already selected
+            setSelectedMedicine(null); 
         } else {
-            setSelectedMedicine(drug); // Select the clicked drug
+            setSelectedMedicine(drug); 
         }
     };
 
     const handleSymptomClick = (symptom) => {
         if (selectedSymptom && selectedSymptom.id === symptom.id) {
-            setSelectedSymptom(null); // Deselect if already selected
+            setSelectedSymptom(null); 
         } else {
-            setSelectedSymptom(symptom); // Select the clicked symptom
+            setSelectedSymptom(symptom); 
         }
     };
 

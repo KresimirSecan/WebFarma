@@ -36,7 +36,7 @@ function Medicine() {
 
     const handleCardClick = (drug) => {
         if (selectedDrug && selectedDrug.id === drug.id) {
-            setShowContaining(!showContaining); // Toggle containing visibility
+            setShowContaining(!showContaining); 
         } else {
             setSelectedDrug(drug);
             setShowContaining(true);

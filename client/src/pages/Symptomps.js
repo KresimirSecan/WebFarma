@@ -36,7 +36,7 @@ function Symptomps() {
 
     const handleCardClick = (symptom) => {
         if (selectedSymptom && selectedSymptom.id === symptom.id) {
-            setShowDescription(!showDescription); // Toggle description visibility
+            setShowDescription(!showDescription); 
         } else {
             setSelectedSymptom(symptom);
             setShowDescription(true);
