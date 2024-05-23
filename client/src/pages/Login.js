@@ -39,7 +39,7 @@ function Login() {
     };
 
     return (
-        <div>
+        <div className="login-form">
             <input
                 type="text"
                 placeholder="Username"

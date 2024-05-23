@@ -1,0 +1,51 @@
+/* Medicine component styles */
+.medicine-container {
+  background-color: white;
+  padding: 15px;
+  margin: 15px auto;
+  max-width: 700px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.drug {
+  background-color: #ffffff;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.drug:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.body {
+  font-size: 0.95em;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.drug button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.drug button:hover {
+  background-color: #ff1a1a;
+}

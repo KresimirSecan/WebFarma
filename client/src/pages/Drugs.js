@@ -63,6 +63,8 @@ function Drugs() {
             </Formik>
         </div>
     );
+   
+    
 }
 
 export default Drugs;

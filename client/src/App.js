@@ -8,7 +8,9 @@ import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Registration from "./pages/Registration";
 import SearchResults from './pages/SearchResults';
-import PageNotFound from "./pages/PageNotFound";
+import Medicine  from './pages/Medicine';
+import Symptomps from "./pages/Symptomps";
+import PageNotFound  from './pages/PageNotFound';
 import { AuthContext } from './helpers/AuthContext';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -66,6 +68,8 @@ function App() {
               <Route path="/registration" element={<Registration />} />
               <Route path="/login" element={<Login />} />
               <Route path ="/searchResults" element={<SearchResults />} />
+              <Route path="/medicine" element={<Medicine />} />
+              <Route path="/symptomps" element={<Symptomps />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>
           </div>
