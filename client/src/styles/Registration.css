@@ -61,3 +61,38 @@
 .formButton:hover {
     background-color: #0056b3;
 }
+
+.fileButton {
+    width: 70%;
+    padding: 10px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.fileButton:hover {
+    background-color: #0056b3;
+}
+
+.fileCaption {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+}
+
+.imagePreview {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

@@ -3,42 +3,53 @@ import { useParams } from 'react-router-dom';
 import axios from "axios";
 import '../styles/Profile.css'; 
 
+
+const ProfilePicture = ({ picture }) => {
+    let imageUrl = "";
+    if (picture) {
+        console.log("data64: ",picture)
+        imageUrl = picture.startsWith('data:image') ? picture : `data:image/jpeg;base64,${picture}`; 
+    } else {
+        imageUrl = "https://i.ibb.co/nkc87fG/d.jpg"; 
+    }
+    console.log("slika:",imageUrl)
+    return <img className="profilePicture" src={imageUrl} alt="Profile" />;
+ };
+
+
+
 function Profile() {
     let { id } = useParams();
     const [username, setUsername] = useState("");
-    const [picture, setPicture] = useState(""); 
+    const [picture, setPicture] = useState(null);
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/auth/userinfo/${id}`).then((response) => {
-            setUsername(response.data.username);
-            setPicture(response.data.picture); 
-        });
+        axios.get(`http://localhost:3001/auth/userinfo/${id}`)
+            .then((response) => {
+                setUsername(response.data.username);
+                const base64EncodedImage = `data:image/jpeg;base64,${btoa(response.data.picture)}`;
+               
+                setPicture(response.data.picture);
+            })
+            .catch((error) => {
+                console.error('Error fetching user info:', error);
+            });
     }, [id]); 
-
-    const renderPicture = () => {
-        if (picture !== null) {
-            return <img className="profilePicture" src={picture} alt="" />;
-        } else {
-            return <img className="profilePicture" src="https://i.ibb.co/nkc87fG/d.jpg" alt="" />;
-        }
-    }; 
 
     return (
         <div className="profilePageContainer">
             <div className='profileInfo'>
                 <div className="profileHeader">
-                    {renderPicture()}
+                    <ProfilePicture picture={picture} />
                     <h1 className="profileUsername">{username}</h1>
                 </div>
-                <div className="profileBio">
-                    {/* Add additional profile information here if needed */}
-                </div>
+                
             </div>
-            <div className='listOfPosts'>
-                {/* Display user's posts here if applicable */}
-            </div>
+           
         </div>
     );
 }
+
+
 
 export default Profile;

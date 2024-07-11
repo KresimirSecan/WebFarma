@@ -6,7 +6,6 @@ body {
 
 .App {
   text-align: center;
-  padding: 20px;
 }
 
 /* Navigation styles */
@@ -16,13 +15,14 @@ nav {
   align-items: center;
   background-color: #333;
   padding: 10px 20px;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  flex-wrap: wrap;
+  width: 98%;
 }
 
 .nav-left, .nav-right {
   display: flex;
   align-items: center;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  flex-wrap: wrap;
 }
 
 .nav-left a, .nav-right a, .nav-right button {
@@ -46,7 +46,7 @@ nav {
   margin-left: auto;
   display: flex;
   align-items: center;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  flex-wrap: wrap;
 }
 
 .nav-right .username {
@@ -80,8 +80,7 @@ nav {
 
 .nav-title i {
   font-size: 1.3em;
-  margin-bottom: 10px; 
-  margin-right: 3px; /* Reduce the margin to move the icon closer to the text */
+  margin-right: 3px;
 }
 
 /* Page styles */
@@ -94,7 +93,6 @@ nav {
   border-radius: 10px;
 }
 
-/* Example specific styles */
 .home-page {
   background-color: #e3f2fd;
 }
@@ -166,13 +164,13 @@ nav {
   color: white;
   background-color: #007bff;
   border: none;
-  border-radius: 0; /* Remove border-radius to cover the full width */
+  border-radius: 0;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .nav-button:first-child {
-  border-right: 1px solid white; /* Add border to separate the buttons */
+  border-right: 1px solid white;
 }
 
 .nav-button:hover {
@@ -333,4 +331,3 @@ nav {
     float: none;
   }
 }
-

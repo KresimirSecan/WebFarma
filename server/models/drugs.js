@@ -1,4 +1,3 @@
-const contributors = require("./contributors");
 
 module.exports = (sequelize,DataTypes) => {
     const drugs  = sequelize.define("drugs",{
@@ -18,12 +17,6 @@ module.exports = (sequelize,DataTypes) => {
 
     });
 
-    drugs.associate = (models) => {
-        drugs.hasMany(models.contributors, {
-            foreignKey: 'drugId', 
-            onDelete : "cascade"
-        });
-    };
     return drugs
 };
 

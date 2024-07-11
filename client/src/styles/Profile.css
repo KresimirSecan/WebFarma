@@ -21,7 +21,7 @@
   
   .profileUsername {
     font-size: 24px;
-    margin-top: 10px; /* Add margin-top to create space between picture and username */
+    margin-top: 10px;
   }
   
   .profilePicture {
@@ -32,11 +32,5 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  .profileBio {
-    /* Add styles for additional profile information if needed */
-  }
-  
-  .listOfPosts {
-    /* Add styles for the list of posts if needed */
-  }
+
   

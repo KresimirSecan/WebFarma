@@ -1,6 +1,6 @@
 import './App.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import { BrowserRouter as Router, Route, Routes, NavLink, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, NavLink, Link} from 'react-router-dom';
 import Home from "./pages/Home";
 import Drugs from "./pages/Drugs";
 import Drug from "./pages/Drug";
@@ -31,6 +31,7 @@ function App() {
   }, []);
 
   const logout = () => {
+    
     localStorage.removeItem("accessToken");
     setAuthState({ username: "", id: "", status: false });
   };
@@ -44,7 +45,7 @@ function App() {
               <div className="nav-title">
                 <i className="fas fa-pills"></i> WebFarm
               </div>
-              <NavLink to="/Drugs" activeClassName="active">Create A Post</NavLink>
+              <NavLink to="/Drugs" activeClassName="active">New drug</NavLink>
               <NavLink to="/" activeClassName="active">Home</NavLink>
             </div>
             <div className="nav-right">

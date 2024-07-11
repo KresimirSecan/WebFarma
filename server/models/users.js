@@ -15,8 +15,8 @@ module.exports = (sequelize,DataTypes) => {
             type : DataTypes.STRING,
             allowNull : false
         },
-        picture : {
-            type: DataTypes.STRING, 
+        picture: {
+            type: DataTypes.BLOB, 
             allowNull: true
         }
 

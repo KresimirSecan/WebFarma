@@ -22,7 +22,7 @@ function Drugs() {
         }
 
         try {
-            const response = await axios.post("http://localhost:3001/post", data, {
+            const response = await axios.post("http://localhost:3001/drug", data, {
                 headers: { accessToken :  localStorage.getItem("accessToken")}
             });
 
