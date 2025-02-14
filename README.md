@@ -1,4 +1,4 @@
-# Pharmacy Application
+
 
 ## Description
 This project is a simple web application built using **Node.js** for the backend, **React** for the frontend, and **PostgreSQL** as the database.
