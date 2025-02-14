@@ -40,6 +40,7 @@ To start the application open cmd in project repository and run:
 cd client 
 npm start
 ```
+Open another cmd window and run : 
 
 ```sh
 cd server 
