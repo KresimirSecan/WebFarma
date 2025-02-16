@@ -36,24 +36,12 @@ More details can be found in the official [React documentation](https://legacy.r
 
 1. Launch pgAdmin and connect to your PostgreSQL server.
 2. Open Query Tool:
-   - In the left sidebar, under **Servers > PostgreSQL**, right-click on **Databases**.
+   - In the left sidebar, under **Servers > Create > ServerGroup**
+   - Click on ServerGroup log-in and **Create > Database** name it **WebFarma**
    - Click **Query Tool** from the dropdown.
 3. Paste the following SQL script and press **execute script**:
 
 ```sql
--- Create the database (run this separately if needed)
-CREATE DATABASE "WebFarma"
-WITH
-    OWNER = postgres
-    ENCODING = 'UTF8'
-    LC_COLLATE = 'en_US.UTF-8'
-    LC_CTYPE = 'en_US.UTF-8'
-    TABLESPACE = pg_default
-    CONNECTION LIMIT = -1;
-
--- Connect to the database
-\c "WebFarma";
-
 -- Creating tables
 CREATE TABLE IF NOT EXISTS public.drugs (
     id UUID PRIMARY KEY,
