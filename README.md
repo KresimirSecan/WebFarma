@@ -7,6 +7,10 @@ The aim of the project is to create a straightforward pharmacy application that 
 
 ---
 
+https://github.com/user-attachments/assets/c8a68034-3339-47e0-9b6b-21768e91e33f
+
+
+
 ## Requirements
 To run this project, ensure you have the following installed:
 
